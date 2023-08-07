@@ -2,6 +2,10 @@
 import React from 'react';
 import './style.css';
 
+//prop drilling
+//useContext
+//useReducer
+
 function App() {
   return (
     <div className="container">
