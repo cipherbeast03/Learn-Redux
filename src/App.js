@@ -17,7 +17,7 @@ function App() {
           -
         </button>
         <div className="quantity-value" id="quantityValue">
-          1
+          {myState}
         </div>
         <button className="btn" id="incrementBtn">
           +
