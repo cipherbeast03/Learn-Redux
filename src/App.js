@@ -1,6 +1,7 @@
 //what does this code line mean "
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { incNumber, decrNumber } from './Actions/index';
 import './style.css';
 
 //prop drilling
@@ -9,17 +10,26 @@ import './style.css';
 
 function App() {
   const myState = useSelector((state) => state.changeTheNumber);
+  const dispatch = useDispatch();
   return (
     <div className="container">
       <div className="product">Product Name</div>
       <div className="quantity">
-        <button className="btn" id="decrementBtn">
+        <button
+          className="btn"
+          id="decrementBtn"
+          onClick={() => dispatch(decrNumber())}
+        >
           -
         </button>
         <div className="quantity-value" id="quantityValue">
           {myState}
         </div>
-        <button className="btn" id="incrementBtn">
+        <button
+          className="btn"
+          id="incrementBtn"
+          onClick={() => dispatch(incNumber())}
+        >
           +
         </button>
       </div>
