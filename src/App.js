@@ -1,5 +1,6 @@
 //what does this code line mean "
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import './style.css';
 
 //prop drilling
@@ -7,6 +8,7 @@ import './style.css';
 //useReducer
 
 function App() {
+  const myState = useSelector((state) => state.changeTheNumber);
   return (
     <div className="container">
       <div className="product">Product Name</div>
